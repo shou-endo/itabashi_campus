@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東京都市大学 板橋キャンパスキャンパスマップ検索</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>東京都市大学 板橋キャンパス</h1>
+      <p>名前を入力すると、地図内にマーカーが表示されます。</p>
+    </header>
+
+    <section class="search" aria-label="名前で検索">
+      <form id="search-form" autocomplete="off">
+        <label for="location-input">名前・施設名</label>
+        <div class="search__controls">
+          <input id="location-input" name="location" list="location-list" placeholder="例: 10号館" required>
+          <button type="submit">検索</button>
+        </div>
+        <datalist id="location-list"></datalist>
+      </form>
+      <p id="search-feedback" class="search__feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="map" aria-label="キャンパスマップ">
+      <div class="map__container">
+        <img src="itabashi_cumpus_map01.png" alt="東京都市大学 板橋キャンパスの案内図">
+        <div id="marker" class="marker hidden">
+          <div class="marker__icon"></div>
+          <div id="marker-label" class="marker__label"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
