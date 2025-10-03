@@ -3,8 +3,8 @@ const locations = [
     id: "gate-main",
     name: "正門",
     description: "東京都市大学恒例のメインゲート。",
-    x: 18,
-    y: 59,
+    x: 23,
+    y: 41,
     aliases: ["正門", "メインゲート"]
   },
   {
